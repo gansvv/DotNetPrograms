@@ -6,8 +6,11 @@ namespace DotNetPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Starting dot net programs....");
+
             LevelOrderTreeTraversal.Run();
+
+            Console.WriteLine("\nRun complete.");
         }
     }
 }
