@@ -2,7 +2,7 @@
 
 ## Output
 
-PS C:\code\DotNetPrograms\DotNetPrograms> dotnet run
+```PS C:\code\DotNetPrograms\DotNetPrograms> dotnet run
 Starting dot net programs....
 Level order traversal of binary tree is:
 Computing height of tree, root:1
@@ -39,4 +39,4 @@ Floyd cycle detection in Linked List:
 Does cycle exist? False
 Does cycle exist? True
 
-Run complete.
+Run complete.```
