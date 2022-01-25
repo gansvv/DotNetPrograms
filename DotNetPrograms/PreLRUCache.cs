@@ -24,7 +24,7 @@ namespace DotNetPrograms
             return node.Value.Value;
         }
 
-        public void Put(int key, int value)
+        public void Add(int key, int value)
         {
             if (map.ContainsKey(key))
             {

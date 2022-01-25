@@ -22,6 +22,17 @@ namespace DotNetPrograms
             Console.WriteLine("Get valid number from cache: {0}", cache.Get(4));
             Console.WriteLine("Get valid number from cache: {0}", cache.Get(2));
 
+            PreLRUCache intCache = new PreLRUCache(3);
+            intCache.Add(1, 10);
+            intCache.Add(2, 20);
+            intCache.Add(3, 30);
+            Console.WriteLine("Get valid number from pre cache: {0}", intCache.Get(2));
+            intCache.Add(4, 40);
+            Console.WriteLine("TryGet using unknown key from pre cache: {0}", intCache.Get(100));
+            Console.WriteLine("TryGet using invalidated key from pre cache: {0}", intCache.Get(1));
+            Console.WriteLine("Get valid number from pre cache: {0}", intCache.Get(4));
+            Console.WriteLine("Get valid number from pre cache: {0}", intCache.Get(2));
+
             Console.WriteLine("\nRun complete.");
         }
     }
