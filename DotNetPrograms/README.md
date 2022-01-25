@@ -35,5 +35,8 @@ TryGet using unknown key from pre cache: -1
 TryGet using invalidated key from pre cache: -1
 Get valid number from pre cache: 40
 Get valid number from pre cache: 20
+Floyd cycle detection in Linked List:
+Does cycle exist? False
+Does cycle exist? True
 
 Run complete.

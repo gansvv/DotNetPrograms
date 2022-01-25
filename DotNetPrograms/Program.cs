@@ -33,6 +33,18 @@ namespace DotNetPrograms
             Console.WriteLine("Get valid number from pre cache: {0}", intCache.Get(4));
             Console.WriteLine("Get valid number from pre cache: {0}", intCache.Get(2));
 
+            Console.WriteLine("Floyd cycle detection in Linked List:");
+            LinkedListCycle llist = new ();
+            llist.AddNodeToHead(10);
+            llist.AddNodeToHead(20);
+            llist.AddNodeToHead(30);
+            llist.AddNodeToHead(40);
+            llist.AddNodeToHead(50);
+            Console.WriteLine("Does cycle exist? {0}", llist.DetectCycle());
+            // create loop
+            llist.GetHeadNode.next.next.next.next.next = llist.GetHeadNode;
+            Console.WriteLine("Does cycle exist? {0}", llist.DetectCycle());
+
             Console.WriteLine("\nRun complete.");
         }
     }
