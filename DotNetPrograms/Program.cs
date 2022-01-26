@@ -45,6 +45,11 @@ namespace DotNetPrograms
             llist.GetHeadNode.next.next.next.next.next = llist.GetHeadNode;
             Console.WriteLine("Does cycle exist? {0}", llist.DetectCycle());
 
+            DotNetProgramsAnother.MaxPathSumBinaryTree.Runner();
+
+            Console.WriteLine("Tree Traversals:");
+            Tree.Traversals.Run();
+
             Console.WriteLine("\nRun complete.");
         }
     }
