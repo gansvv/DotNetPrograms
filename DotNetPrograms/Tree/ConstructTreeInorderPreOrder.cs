@@ -19,7 +19,7 @@ namespace DotNetPrograms.Tree
             }
         }
 
-        public Node root;
+        // public Node root;
         public static int preIndex = 0;
 
         /* Recursive function to construct binary
