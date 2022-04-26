@@ -1,8 +1,43 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DotNetPrograms
 {
+    [TestClass]
+    public class LRUCacheTest
+    {
+        /*
+         * Design and implement the LRU cache with TTL.
+            get(Key, timestamp) - Get value of key at time, return -1 if not exists.
+            put(key, value, expireTimestamp) - Set or update value for a key.
+            When cache reaches capacity, evict LRU item. Also, after record expires, 
+            record will still be in cache but inquiries will get -1.
+            All input ts will be in unix time, postive int in seconds.
+
+           // Ref: https://aonecode.com/LRU-Cache-II-TTL
+           // Ref: https://github.com/tejacques/LRUCache/blob/master/src/LRUCache/LRUCache.cs
+        */
+
+        [TestMethod]
+        public void LRUCacheTestBasic()
+        {
+            var ttlcache = new LRUCache<int, int>(2);
+            ttlcache.Add(1, 10);
+            ttlcache.Add(2, 20);
+            Assert.AreEqual(10, ttlcache.Get(1)); // 10
+            Assert.AreEqual(20, ttlcache.Get(2)); // 20
+            Assert.AreEqual(-1, ttlcache.Get(3)); // -1
+            ttlcache.Add(3, 30);
+            ttlcache.Add(1, 10);
+            ttlcache.Add(4, 40);
+            Assert.AreEqual(40, ttlcache.Get(4)); // -1
+            Assert.AreEqual(-1, ttlcache.Get(3)); // -1
+            ttlcache.Add(5, 50);
+            Assert.AreEqual(-1, ttlcache.Get(1)); // -1
+        }
+    }
+
     public class LRUCache<K, V>
     {
         private int capacity;
@@ -25,7 +60,15 @@ namespace DotNetPrograms
                 lruList.AddLast(node);
                 return value;
             }
-            return default(V);
+
+            if (typeof(V) == typeof(int))
+            {
+                return (V)(object)-1;
+            }
+            else
+            {
+                return default(V);
+            }
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
