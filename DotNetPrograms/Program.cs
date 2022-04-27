@@ -1,5 +1,6 @@
 ﻿using System;
 using DotNetPrograms.Sync;
+using DotNetPrograms.Sync.Stack;
 
 namespace DotNetPrograms
 {
@@ -10,14 +11,14 @@ namespace DotNetPrograms
             Console.WriteLine("Starting dot net programs....");
 
             // Test bed ------------------------
-            MultiThread1.MutexRunner(new string[] { "test" });
-
+            Stack1Runner.Runner();
 
             // complete ------------------------
             return;
 
-
+            MultiThread1.MutexRunner(new string[] { "test" });
             ConcurrentQueue1.Runner();
+            Queue1Runner.Runner();
 
             // Dictionaries
             DuplicatesInArray.Run();
