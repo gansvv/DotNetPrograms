@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DotNetPrograms.DSAndSync
+namespace DotNetPrograms.DSAndSync.CallBack
 {
     public delegate void MyDelegate(long sum);
     public class CallBack

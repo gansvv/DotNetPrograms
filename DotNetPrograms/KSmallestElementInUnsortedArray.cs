@@ -95,8 +95,8 @@ namespace DotNetPrograms
         {
             int[] arr = { 12, 3, 5, 7, 19 };
             int n = arr.Length, k = 2;
-            KSmallestElementInUnsortedArray gfg = new ();
-            Console.Write("K'th smallest element is " + gfg.KthSmallest(arr, n, k));
+            KSmallestElementInUnsortedArray small = new ();
+            Console.Write("K'th smallest element is " + small.KthSmallest(arr, n, k));
         }
     }
 }

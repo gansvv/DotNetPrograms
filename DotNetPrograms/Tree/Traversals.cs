@@ -22,9 +22,7 @@ namespace DotNetPrograms.Tree
 
         Traversals() { root = null; }
 
-        /* Given a binary tree, print
-           its nodes according to the
-           "bottom-up" postorder traversal. */
+        /* Given a binary tree, print its nodes according to the "bottom-up" postorder traversal. */
         void PrintPostorder(Node node)
         {
             if (node == null)

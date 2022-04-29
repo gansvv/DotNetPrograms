@@ -43,6 +43,7 @@ namespace DotNetPrograms.Sync
                 }
             }
 
+            /*
             static object linksLock = new object();
 
             static void AddLine()
@@ -81,7 +82,7 @@ namespace DotNetPrograms.Sync
             else
             {
                 // Code to execute if the attempt times out.  
-            }
+            }*/
         }
 
 

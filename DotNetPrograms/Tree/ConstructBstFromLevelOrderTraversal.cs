@@ -67,8 +67,7 @@ namespace DotNetPrograms.Tree
         // Driver code
         public static void Run()
         {
-            int[] arr = {7, 4, 12, 3,
-                 6, 8, 1, 5, 10};
+            int[] arr = {7, 4, 12, 3, 6, 8, 1, 5, 10};
             int n = arr.Length;
 
             Node root = ConstructBst(arr, n);
